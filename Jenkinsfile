@@ -1,6 +1,6 @@
 pipeline {
     agent { label 'linux-node' }
-    
+
     stages {
         stage('Git Checkout') {
             steps {
@@ -11,7 +11,7 @@ pipeline {
                 )
             }
         }
-        
+
         stage('Building') {
             steps {
                 script {
@@ -19,7 +19,7 @@ pipeline {
                 }
             }
         }
-        
+
         stage('Deployment') {
             steps {
                 script {
